@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 255, 255, 255;
+	--background-start-rgb: 0, 0, 0;
+	--background-end-rgb: 0, 0, 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}
+
+body {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	@apply rounded-sm bg-zinc-800;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-zinc-700;
+}
+
+/* If the user prefers dark mode, 
+we of course apply color-scheme: dark, as usual */
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+
+/* If the user prefers light mode, 
+  we still enforce color-scheme: dark, despite the user preference */
+@media (prefers-color-scheme: light) {
+	html {
+		color-scheme: dark;
+	}
+}
