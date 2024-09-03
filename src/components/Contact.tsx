@@ -5,8 +5,7 @@ import { Button, useMatches } from "@mantine/core";
 import emailjs from "@emailjs/browser";
 import { IconArrowRight, IconTopologyStar3 } from "@tabler/icons-react";
 import toast from "react-hot-toast";
-
-
+/* eslint-disable react/no-unescaped-entities */ 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
 
@@ -59,7 +58,7 @@ const Contact = () => {
         className="w-[70%] lg-mx:w-full shadow-[0_0_10px_0_#64FFDA50] m-auto flex flex-col gap-6 border border-primaryColor p-8 rounded-3xl sm-mx:p-4"
       >
         <div className="text-3xl text-violet-800 flex gap-2 items-center font-semibold sm-mx:text-2xl xs-mx:text-xl">
-          Let&apos; Connect
+          Let's Connect
           <IconTopologyStar3 className="w-10 text-primaryColor h-10 sm-mx:w-7 sm-mx:h-7" />
         </div>
         <form

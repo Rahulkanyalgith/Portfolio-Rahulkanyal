@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { BackgroundGradient } from "@/components/Aceternity/background-gradient";
 
+/* eslint-disable react/no-unescaped-entities */ 
 function About() {
 	return (
 		<div>
@@ -41,7 +42,7 @@ function About() {
 							important to me since I enjoy turning ideas into tangible
 							products. I am always using the internet to learn new things,
 							adapt fascinating tech, and work on interesting projects. Join me
-							and let&apos;s make something amazing!
+							and let's make something amazing!
 						</p>
 						<div className="mt-2 flex items-center gap-4 md:mt-4">
 							<Link
