@@ -30,8 +30,8 @@ export const projectInfo = [
     title: "Portfolio",
     githubLink: "https://github.com/Rahulkanyalgith/e-comm-reactjs",
     deployedLink: "https://github.com/Rahulkanyalgith/e-comm-reactjs",
-    description: "E-comm is a web-app that allows users to buy products online. It is a front-end application built using Reactjs. It allows users to view products, add them to cart and checkout. It is fully responsive and user-friendly.",
-    skill: ["Nextjs", "Tailwind CSS" ,"mongoose"]
+    description: "Developed a fully responsive and user-friendly front-end application using Next.js, TypeScript, and Aceternity UI. Showcases a curated selection of projects and skills, offering an intuitive and engaging user experience across all devices.",
+    skill: ["Nextjs", "TypeScript", "Tailwind CSS" ,"mongoose", "Aceternity UI"]
   },
   {
     img: delv,

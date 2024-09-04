@@ -26,7 +26,7 @@ const Contact = () => {
             form.current?.reset();
           },
           (error) => {
-            console.log(error.text);
+            // console.log(error.text);
             toast.error("Failed to send message, please try again", {
               duration: 4000,
             });
