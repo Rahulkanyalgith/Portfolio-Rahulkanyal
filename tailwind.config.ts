@@ -1,4 +1,4 @@
-import { oxanium } from "@/components/Hero";
+
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -17,10 +17,8 @@ const config: Config = {
 	darkMode: "media",
 	theme: {
 		extend: {
-			fontFamily: {
-				oxanium: ['var(--font-oxanium)'],
-			},
-			backgroundImage: {
+		
+		backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
