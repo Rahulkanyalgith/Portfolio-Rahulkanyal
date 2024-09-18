@@ -94,13 +94,13 @@ function Hero({ socialMedia }: Props) {
 				</div>
 				<p className="flex items-center gap-2 text-lg font-semibold md:text-2xl">
 					<Image
-						src={"/waving-hand.gif"}
+						src={"/ggg.gif"}
 						unoptimized={true}
 						alt="waving-hand"
 						width={30}
 						height={30}
 					/>
-					Hey
+					Namste | Kon'nichiwa 
 				</p>
 				<h1 className="text-4xl font-mono font-bold md:text-6xl" >
 					I am Rahul Kanyal
@@ -174,7 +174,7 @@ function Hero({ socialMedia }: Props) {
 					src={
 						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
 					}
-					name="typescript"	
+					name="Typescript"	
 					size={12}
 					className="-right-14 -top-4 size-16"
 				/>

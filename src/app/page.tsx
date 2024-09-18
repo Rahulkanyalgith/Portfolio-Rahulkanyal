@@ -5,7 +5,7 @@ import Projects from "@/components/projects/Projects";
 import dbConnect from "@/db";
 import SkillModel, { Skill } from "@/model/skill.model";
 import Contact from "@/components/Contact";
-import { BsDiscord, BsGithub,  BsTwitter } from "react-icons/bs";
+import { BsDiscord, BsGithub,  BsInstagram,  BsTwitter } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { MantineProvider, createTheme } from "@mantine/core";
 
@@ -44,14 +44,19 @@ export default async function Home() {
 			logo: BsGithub,
 		},
 		{
-			name: "Discord",
-			link: "https://discord.gg/qzwtgcQM",
-			logo: BsDiscord ,
-		},
-		{
 			name: "Twitter",
 			link: "https://x.com/the_Fitcode",
 			logo: BsTwitter,
+		},
+		{
+			name: "Instagram",
+			link: "https://www.instagram.com/rahul_kanyal13/",
+			logo: BsInstagram ,
+		},
+		{
+			name: "Discord",
+			link: "https://discord.gg/qzwtgcQM",
+			logo: BsDiscord ,
 		},
 	];
 

@@ -11,7 +11,7 @@ function About() {
 				id="about"
 				className="mb-8 mt-8 text-center font-mono text-4xl lg:mb-0 lg:mt-0 "
 			>
-				<span className="text-primaryColor">02.&nbsp;</span>About Myself
+				<span className="text-primaryColor">01.&nbsp;</span>About Myself
 			</h2>
 			<div className="mx-auto mt-2 flex w-full flex-col items-center justify-between md:gap-4 lg:mt-20 lg:w-11/12 lg:flex-row 2xl:w-4/5">
 				<BackgroundGradient

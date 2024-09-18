@@ -6,7 +6,7 @@ const Skills = () => {
 	return (
 		<div className="md-mx:px-6 my-10 px-16 font-mono" id="skills">
 			<h1 className="sm-mx:text-3xl xs-mx:text-2xl mb-10 text-center text-4xl font-bold text-white">
-				<span className="text-primaryColor">03.&nbsp;</span>Tech Stack | Skills
+				<span className="text-primaryColor">02.&nbsp;</span>Tech Stack | Skills
 			</h1>
 			<div className="md-mx:justify-between sm-mx:justify-center md-mx:gap-2 flex flex-wrap justify-around gap-4">
 				<div className="my-12 w-full">
