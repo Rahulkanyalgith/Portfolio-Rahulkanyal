@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 import { BsDiscord, BsGithub,  BsInstagram,  BsTwitter } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { MantineProvider, createTheme } from "@mantine/core";
-
+import Cursor from "@/components/Cursor";
 
 
 export default async function Home() {
@@ -75,6 +75,7 @@ export default async function Home() {
 
 	return (
 		<MantineProvider theme={theme}>
+		<Cursor />
        <Hero socialMedia={socialMedia} />
 		<About />
 		<Skills  />
