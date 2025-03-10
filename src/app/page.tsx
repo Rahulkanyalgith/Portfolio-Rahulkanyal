@@ -55,7 +55,7 @@ export default async function Home() {
 		},
 		{
 			name: "Discord",
-			link: "https://discord.gg/qzwtgcQM",
+			link: "https://discord.gg/k2J4GaRu",
 			logo: BsDiscord ,
 		},
 	];
