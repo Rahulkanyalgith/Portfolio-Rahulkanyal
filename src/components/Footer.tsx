@@ -24,7 +24,7 @@ function Footer() {
 				<p>
 					Made with
 					<span className="mx-1 whitespace-nowrap rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 p-1">
-						NEXT.js | TypeScript | Mongoose
+						NEXT.js | TypeScript 
 					</span>
 				</p>
 			</div>
