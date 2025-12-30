@@ -2,9 +2,10 @@ import Skills from "@/components/skill/Skills";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Projects from "@/components/projects/Projects";
+import Blog from "@/components/blog/Blog";
 import dbConnect from "@/db";
 import SkillModel, { Skill } from "@/model/skill.model";
-import Contact from "@/components/Contact";
+// import Contact from "@/components/Contact";
 import { BsDiscord, BsGithub,  BsInstagram,  BsTwitter } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { MantineProvider, createTheme } from "@mantine/core";
@@ -80,7 +81,8 @@ export default async function Home() {
 		<About />
 		<Skills  />
 		<Projects />
-		<Contact />
+		<Blog />
+		{/* <Contact /> */}
    
 </MantineProvider>
 	);

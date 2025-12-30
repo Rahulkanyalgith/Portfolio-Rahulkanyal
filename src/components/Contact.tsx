@@ -38,63 +38,59 @@ const Contact = () => {
 
   return (
     <div className="px-6 md:px-12 lg:px-20 xl:px-32 mx-auto my-10 max-w-screen-lg" id="contact">
-      <h1 className="text-4xl sm:text-3xl xs:text-2xl font-bold text-center text-white mb-10">
-        <span className="text-primaryColor">04.&nbsp;</span>Contact
+      <h1 className="text-5xl sm:text-4xl xs:text-2xl font-bold text-center mb-12">
+        <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">05.&nbsp;</span>
+        <span className="text-white">Get In Touch</span>
       </h1>
 
       <div 
         data-aos="flip-left"
         data-aos-duration="800"
-        className="w-full max-w-lg mx-auto shadow-lg border border-primaryColor p-6 sm:p-4 rounded-2xl"
+        className="w-full max-w-lg mx-auto shadow-2xl shadow-violet-500/20 border border-zinc-700/50 bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 backdrop-blur-lg p-8 sm:p-6 rounded-2xl"
       >
-        <div className="text-2xl text-violet-800 flex items-center justify-center font-semibold mb-4">
+        <div className="text-2xl text-white flex items-center justify-center font-bold mb-6">
           Let's Connect
-          <IconTopologyStar3 className="w-8 h-8 text-primaryColor ml-2" />
+          <IconTopologyStar3 className="w-8 h-8 text-violet-400 ml-2 animate-float" />
         </div>
 
         <form ref={form} onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
           <input
             type="text"
             name="name"
-            className="block w-full p-3 text-lg rounded-lg text-white bg-transparent border border-textColor focus:border-primaryColor focus:ring-0 outline-none"
-            placeholder="Name"
+            className="block w-full p-3 text-base rounded-lg text-white bg-zinc-800/50 border border-zinc-700 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 outline-none transition-all duration-300"
+            placeholder="Your Name"
             required
           />
           <input
             type="email"
             name="email"
-            className="block w-full p-3 text-lg rounded-lg text-white bg-transparent border border-textColor focus:border-primaryColor focus:ring-0 outline-none"
-            placeholder="Email"
+            className="block w-full p-3 text-base rounded-lg text-white bg-zinc-800/50 border border-zinc-700 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 outline-none transition-all duration-300"
+            placeholder="Your Email"
             required
           />
           <input
             type="number"
             name="phone"
-            className="block w-full p-3 text-lg rounded-lg text-white bg-transparent border border-textColor focus:border-primaryColor focus:ring-0 outline-none"
+            className="block w-full p-3 text-base rounded-lg text-white bg-zinc-800/50 border border-zinc-700 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 outline-none transition-all duration-300"
             placeholder="Phone Number"
             required
           />
           <textarea
             name="message"
             rows={4}
-            className="block w-full p-3 text-lg rounded-lg text-white bg-transparent border border-textColor focus:border-primaryColor focus:ring-0 outline-none"
-            placeholder="Message"
+            className="block w-full p-3 text-base rounded-lg text-white bg-zinc-800/50 border border-zinc-700 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 outline-none transition-all duration-300 resize-none"
+            placeholder="Your Message"
             required
           ></textarea>
 
-          <div className="text-center">
-            <Button
-              fullWidth
+          <div className="text-center pt-2">
+            <button
               type="submit"
-              rightSection={<IconArrowRight size={20} />}
-              className="!text-bgColor !font-bold"
-              variant="filled"
-              size="md"
-              radius="lg"
-              color="#64FFDA"
+              className="w-full py-3 px-6 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/50 hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
             >
-              Send
-            </Button>
+              <span>Send Message</span>
+              <IconArrowRight size={20} />
+            </button>
           </div>
         </form>
       </div>

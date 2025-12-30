@@ -48,8 +48,8 @@ function Hero({ socialMedia }: Props) {
 			/>
 			<Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="white" />
 
-			<div className="relative mx-6 flex flex-col gap-4 text-left md:mx-6 md:gap-6 lg:w-1/2 xl:mx-0 2xl:w-1/3">
-				<div className="absolute -top-8">
+			<div className="relative mx-6 flex flex-col gap-6 text-left md:mx-6 md:gap-8 lg:w-1/2 xl:mx-0 2xl:w-1/3">
+				<div className="absolute -top-8 opacity-0 md:opacity-100">
 					<svg
 						width="236"
 						height="68"
@@ -92,36 +92,32 @@ function Hero({ socialMedia }: Props) {
 						/>
 					</svg>
 				</div>
-				<p className="flex items-center gap-2 text-lg font-semibold md:text-2xl">
+				<div className="flex items-center gap-3 mb-2 animate-fade-in">
 					<Image
 						src={"/ggg.gif"}
 						unoptimized={true}
 						alt="waving-hand"
-						width={30}
-						height={30}
+						width={32}
+						height={32}
+						className="drop-shadow-lg"
 					/>
-					Namste | Kon'nichiwa 
-				</p>
-				<h1 className="text-4xl font-mono font-bold md:text-6xl" >
-					I am Rahul Kanyal
-				</h1>
-				<div className="text-lg  font-mono font-semibold md:text-2xl">
-					I am a{" "}
-					<Typewriter
-						className="inline-block text-violet-600 "
-						speed={100}
-						words={[ "  Full Stack Developer" ,"  MERN Stack Developer",  "Web Developer"]}
-					/>
+					<p className="text-base md:text-lg font-semibold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+						Namste | Kon'nichiwa 
+					</p>
 				</div>
-				<p className="text-sm text-zinc-400 md:text-lg font-mono">
-				An enthusiastic web developer who is driven by a love of coding, lifelong learning, and turning concepts into engaging digital experiences is producing creative and applications. 
+				<h1 className="text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-white via-blue-400 to-purple-600 bg-clip-text text-transparent" >
+					I'm Rahul Kanyal
+				</h1>
+			
+				<p className="text-sm md:text-base text-zinc-300 font-light leading-relaxed max-w-md">
+				Passionate AI-driven full-stack developer crafting beautiful, functional digital experiences. I transform ideas into engaging, scalable web applications using clean code, modern design principles, and intelligent features powered by AI.
 				</p>
-				<div className="flex items-center space-x-6">
+				<div className="flex flex-wrap items-center gap-4 pt-2">
 					<Link
-						className="group flex w-fit cursor-pointer items-center gap-1 rounded-md bg-violet-700 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-800 md:text-base"
+						className="group relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 px-6 py-3 text-sm md:text-base font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/50 hover:scale-105 active:scale-95"
 						href={"#about"}
 					>
-						<span className="font-mono">About Me</span>
+						<span>Explore My Work</span>
 						<svg
 							stroke="currentColor"
 							fill="currentColor"
@@ -135,21 +131,18 @@ function Hero({ socialMedia }: Props) {
 							<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
 						</svg>
 					</Link>
-					<div className="flex items-center gap-3">
+					<div className="flex items-center gap-2">
 						{socialMedia.map((info, key) => (
-							<div
+							<Link
 								key={key}
-								className="saturate-180 bg-black-200 border-black-300 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border bg-opacity-75 backdrop-blur-lg backdrop-filter transition-all hover:border-4"
+								href={info.link}
+								aria-label={info.name}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="group flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/50 backdrop-blur-md transition-all duration-300 hover:border-violet-500 hover:bg-gradient-to-r hover:from-violet-600/20 hover:to-fuchsia-600/20 hover:shadow-lg hover:shadow-violet-500/30"
 							>
-								<Link
-									href={info.link}
-									aria-label={info.name}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{info.logo({ className: "h-5 w-5" })}
-								</Link>
-							</div>
+								{info.logo({ className: "h-5 w-5 group-hover:text-violet-400 transition-colors" })}
+							</Link>
 						))}
 					</div>
 				</div>
