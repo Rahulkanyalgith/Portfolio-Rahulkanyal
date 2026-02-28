@@ -3,72 +3,115 @@ import Link from "next/link";
 import React from "react";
 import { BackgroundGradient } from "@/components/Aceternity/background-gradient";
 
-/* eslint-disable react/no-unescaped-entities */ 
+/* eslint-disable react/no-unescaped-entities */
 function About() {
 	return (
-		<div>
-			<h2
-				id="about"
-				className="mb-8 mt-8 text-center font-bold text-4xl md:text-5xl lg:mb-0 lg:mt-0"
-			>
-				<span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">01.&nbsp;</span>About Me
-			</h2>
-			<div className="mx-auto mt-2 flex w-full flex-col items-center justify-between md:gap-4 lg:mt-20 lg:w-11/12 lg:flex-row 2xl:w-4/5">
-				<BackgroundGradient
-					className="w-full"
-					containerClassName="mx-auto flex w-56 flex-col items-center gap-2 self-start rounded-lg p-1 transition-transform duration-300 hover:-translate-y-4 md:w-2/5 lg:mx-16 lg:w-72 lg:-rotate-3"
-				>
-					<div className="mx-auto flex w-full flex-col items-center gap-2 self-start rounded-2xl bg-zinc-900 p-3">
-						<Image
-							alt={"/self.jpg"}
-							width={1000}
-							height={1000}
-							loading={"lazy"}
-							className="h-60 w-full rounded-2xl bg-violet-100 object-cover object-top grayscale transition-all duration-300 hover:grayscale-0 md:h-80 lg:h-80"
-							src={"/about.jpg"}
-						/>
+		<section className="relative w-full overflow-hidden py-28 md:py-36 px-6 md:px-10">
+			{/* Ambient background glow — same palette as Hero */}
+			<div className="absolute inset-0 -z-10 overflow-hidden">
+				<div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-violet-600/[0.07] to-fuchsia-600/[0.05] blur-[120px]"></div>
+				<div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-cyan-600/[0.06] to-purple-600/[0.04] blur-[120px]"></div>
+			</div>
+
+			<div className="mx-auto max-w-6xl">
+				{/* Section Header — matches Skills section numbering style */}
+				<h2 className="mb-16 md:mb-20 text-center text-4xl md:text-5xl font-bold">
+					<span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+						01.&nbsp;
+					</span>
+					<span className="text-white">About Me</span>
+				</h2>
+
+				{/* Two-column layout */}
+				<div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+					{/* Image — 5 columns */}
+					<div className="lg:col-span-5 flex justify-center">
+						<BackgroundGradient
+							className="relative z-10"
+							containerClassName="rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-violet-500/20"
+						>
+							<div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-800 p-[3px]">
+								<Image
+									alt="Rahul Kanyal"
+									width={460}
+									height={560}
+									loading="lazy"
+									className="h-[400px] md:h-[460px] w-full object-cover object-top rounded-2xl"
+									src="/about.jpg"
+								/>
+								<div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
+							</div>
+						</BackgroundGradient>
 					</div>
-				</BackgroundGradient>
-				<div className="mx-6 mt-8 flex-1 text-left md:mx-0 md:mt-0 md:p-6">
-					<div className="flex flex-col gap-3">
-						<p className="text-3xl font-bold bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">Rahul Kanyal</p>
-						<p className="w-fit rounded-full bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 px-4 py-2 text-sm font-semibold text-violet-300 border border-violet-500/30">
-							✨ Full Stack Developer - AI
-						</p>
-						<p className="text-sm text-zinc-300 md:text-base md:font-medium leading-relaxed">
-							AI-driven full-stack developer with a passion for creating beautifully designed digital products. I specialize in building user-friendly front-end experiences and robust, scalable back-end systems. I’m driven by a strong desire to learn cutting-edge technologies, leverage AI to solve real-world problems, and contribute to meaningful projects that make a real impact.
-						</p>
-						<div className="mt-4 flex flex-wrap items-center gap-3 md:mt-6">
+
+					{/* Content — 7 columns */}
+					<div className="lg:col-span-7 flex flex-col gap-8">
+
+						{/* Name & Role */}
+						<div className="space-y-3">
+							<h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+								Rahul Kanyal
+							</h3>
+							<p className="text-base md:text-lg font-semibold bg-gradient-to-r from-violet-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
+								Full Stack Developer &bull; AI Enthusiast
+							</p>
+						</div>
+
+						{/* Thin gradient divider */}
+						<div className="h-px w-full bg-gradient-to-r from-violet-500/40 via-fuchsia-500/20 to-transparent"></div>
+
+						{/* Bio */}
+						<div className="space-y-4 text-zinc-400 text-base md:text-[17px] leading-relaxed">
+							<p>
+								I'm a passionate{" "}
+								<span className="text-violet-300 font-medium">AI-driven full-stack developer</span>{" "}
+								dedicated to creating stunning digital products. I specialize in crafting intuitive
+								front-end experiences paired with powerful back-end systems.
+							</p>
+							<p>
+								With a deep curiosity for cutting-edge technologies, I leverage AI to solve real-world
+								challenges and contribute to projects that create{" "}
+								<span className="text-cyan-300 font-medium">meaningful impact</span>.
+							</p>
+						</div>
+
+						{/* CTA Buttons */}
+						<div className="flex flex-wrap items-center gap-4 pt-4">
 							<Link
 								href="/resume.pdf"
 								target="_blank"
-								className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/50 hover:scale-105 active:scale-95"
+								className="group relative inline-flex items-center gap-2.5 px-7 py-3 text-sm font-semibold text-white overflow-hidden rounded-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
 							>
-								📄 Resume
+								<div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/40"></div>
+								<span className="relative flex items-center gap-2">
+									<svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3" />
+									</svg>
+									Download Resume
+								</span>
 							</Link>
+
 							<Link
-								className="group inline-flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900/50 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:border-violet-500 hover:bg-violet-600/10 hover:shadow-lg hover:shadow-violet-500/30"
-								href={"#skills"}
+								href="#skills"
+								className="group inline-flex items-center gap-2 rounded-lg border border-violet-500/30 bg-gradient-to-r from-violet-600/10 to-fuchsia-600/10 px-7 py-3 text-sm font-semibold text-zinc-200 backdrop-blur-sm transition-all duration-300 hover:border-violet-500/60 hover:text-white hover:scale-[1.03] active:scale-[0.97]"
 							>
-								<span>My Skills</span>
+								Explore Skills
 								<svg
+									className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+									fill="none"
 									stroke="currentColor"
-									fill="currentColor"
-									strokeWidth="0"
-									viewBox="0 0 512 512"
-									className="transition-transform group-hover:translate-x-1"
-									height="1em"
-									width="1em"
-									xmlns="http://www.w3.org/2000/svg"
+									strokeWidth="2"
+									viewBox="0 0 24 24"
 								>
-									<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+									<path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 								</svg>
 							</Link>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

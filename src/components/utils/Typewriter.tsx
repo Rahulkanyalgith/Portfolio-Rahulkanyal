@@ -5,20 +5,22 @@ import { Typewriter } from "react-simple-typewriter";
 
 type Props = {
 	words: string[];
-	speed: number;
-	className: string;
+	typeSpeed?: number;
+	deleteSpeed?: number;
+	delaySpeed?: number;
+	className?: string;
 };
 
-function MyTypewriter({ words, speed, className }: Props) {
+function MyTypewriter({ words, typeSpeed = 70, deleteSpeed = 50, delaySpeed = 1500, className = "" }: Props) {
 	return (
 		<div className={className}>
 			<Typewriter
 				words={words}
 				cursor
 				cursorColor="grey"
-				typeSpeed={speed}
-				deleteSpeed={100}
-				delaySpeed={1500}
+				typeSpeed={typeSpeed}
+				deleteSpeed={deleteSpeed}
+				delaySpeed={delaySpeed}
 				loop
 			/>
 		</div>

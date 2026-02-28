@@ -4,16 +4,34 @@ import Marquee from "react-fast-marquee";
 
 const Skills = () => {
 	return (
-		<div className="md-mx:px-6 my-10 px-6 md:px-12 font-sans" id="skills">
-			<h1 className="sm-mx:text-3xl xs-mx:text-2xl mb-12 text-center text-5xl font-bold">
-				<span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">02.&nbsp;</span>
-				<span className="text-white">Tech Stack & Skills</span>
-			</h1>
-			<div className="md-mx:justify-between sm-mx:justify-center md-mx:gap-2 flex flex-wrap justify-around gap-4">
-				<div className="my-12 w-full">
+		<section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" id="skills">
+			{/* Subtle background gradient */}
+			<div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-transparent pointer-events-none" />
+			
+			<div className="relative max-w-7xl mx-auto">
+				{/* Section Header */}
+				<div className="text-center mb-16 space-y-4">
+					<span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase bg-white/5 text-slate-400 border border-white/10">
+						Technologies
+					</span>
+					<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+						<span className="text-white">Tech Stack </span>
+						<span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">& Skills</span>
+					</h2>
+					<p className="max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed">
+						Building modern applications with cutting-edge technologies
+					</p>
+				</div>
+
+				{/* Skills Marquee */}
+				<div className="relative">
+					{/* Gradient fade edges */}
+					<div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
+					<div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
+					
 					<Marquee
 						gradient={false}
-						speed={120}
+						speed={60}
 						pauseOnHover={true}
 						pauseOnClick={true}
 						delay={0}
@@ -22,26 +40,26 @@ const Skills = () => {
 					>
 						{skillsData.map((skill: string, id: number) => (
 							<div
-								className="group relative m-3 flex h-fit w-36 min-w-fit cursor-pointer flex-col items-center justify-center rounded-xl transition-all duration-500 hover:scale-110 sm:m-5"
+								className="group mx-3 sm:mx-4"
 								key={id}
 							>
-								<div className="relative mb-5 h-full w-full rounded-xl border border-zinc-700/50 bg-gradient-to-br from-violet-600/10 to-fuchsia-600/10 shadow-none transition-all duration-300 hover:border-violet-500 hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]">
-									<div className="flex -translate-y-[1px] justify-center">
-										<div className="w-3/4">
-											<div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-										</div>
-									</div>
-									<div className="flex flex-col items-center justify-center gap-3 p-6">
-										<div className="h-8 sm:h-10 filter group-hover:brightness-125 transition-all duration-300">
+								<div className="relative flex flex-col items-center justify-center w-28 sm:w-32 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-white/[0.12] hover:scale-[1.02] hover:-translate-y-1">
+									{/* Subtle glow on hover */}
+									<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-500/0 to-blue-500/0 group-hover:from-violet-500/5 group-hover:to-blue-500/5 transition-all duration-300" />
+									
+									<div className="relative z-10 flex flex-col items-center gap-3">
+										<div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
 											<img
 												src={`skills/${skill.toLowerCase()}.svg`}
 												alt={skill}
-												width={40}
-												height={40}
-												className="h-full w-auto rounded-lg"
+												width={48}
+												height={48}
+												className="w-full h-full object-contain drop-shadow-sm"
 											/>
 										</div>
-										<p className="text-sm font-semibold text-zinc-300 sm:text-base group-hover:text-white transition-colors duration-300">{skill}</p>
+										<span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors duration-300 whitespace-nowrap">
+											{skill}
+										</span>
 									</div>
 								</div>
 							</div>
@@ -49,7 +67,8 @@ const Skills = () => {
 					</Marquee>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
+
 export default Skills;

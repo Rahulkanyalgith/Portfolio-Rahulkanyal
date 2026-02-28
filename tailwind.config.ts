@@ -32,6 +32,22 @@ const config: Config = {
 				fourth: "moveHorizontal 40s ease infinite",
 				fifth: "moveInCircle 20s ease infinite",
 				"meteor-effect": "meteor 5s linear infinite",
+				"fade-in": "fadeIn 0.6s ease-out",
+				"fade-in-up": "fadeInUp 0.8s ease-out",
+				"fade-in-down": "fadeInDown 0.8s ease-out",
+				"fade-in-left": "fadeInLeft 0.8s ease-out",
+				"fade-in-right": "fadeInRight 0.8s ease-out",
+				"scale-in": "scaleIn 0.5s ease-out",
+				"float": "float 3s ease-in-out infinite",
+				"float-delayed": "float 3s ease-in-out infinite 0.5s",
+				"pulse-glow": "pulseGlow 2s ease-in-out infinite",
+				"bounce-sm": "bounceSm 1.2s ease-in-out infinite",
+				"shimmer-text": "shimmerText 2.5s ease-in-out infinite",
+				"slide-in-left": "slideInLeft 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)",
+				"slide-in-right": "slideInRight 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)",
+				"flip-card": "flipCard 0.6s ease-out",
+				"gradient-shift": "gradientShift 3s ease-in-out infinite",
+				"rotate-in": "rotateIn 0.7s ease-out",
 			},
 			keyframes: {
 				spotlight: {
@@ -92,6 +108,69 @@ const config: Config = {
 						transform: "rotate(215deg) translateX(-500px)",
 						opacity: "0",
 					},
+				},
+				fadeIn: {
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" },
+				},
+				fadeInUp: {
+					"0%": { opacity: "0", transform: "translateY(20px)" },
+					"100%": { opacity: "1", transform: "translateY(0)" },
+				},
+				fadeInDown: {
+					"0%": { opacity: "0", transform: "translateY(-20px)" },
+					"100%": { opacity: "1", transform: "translateY(0)" },
+				},
+				fadeInLeft: {
+					"0%": { opacity: "0", transform: "translateX(-20px)" },
+					"100%": { opacity: "1", transform: "translateX(0)" },
+				},
+				fadeInRight: {
+					"0%": { opacity: "0", transform: "translateX(20px)" },
+					"100%": { opacity: "1", transform: "translateX(0)" },
+				},
+				scaleIn: {
+					"0%": { opacity: "0", transform: "scale(0.95)" },
+					"100%": { opacity: "1", transform: "scale(1)" },
+				},
+				float: {
+					"0%, 100%": { transform: "translateY(0px)" },
+					"50%": { transform: "translateY(-10px)" },
+				},
+				pulseGlow: {
+					"0%, 100%": { opacity: "1", boxShadow: "0 0 0 0 rgba(168, 85, 247, 0.7)" },
+					"50%": { boxShadow: "0 0 0 10px rgba(168, 85, 247, 0)" },
+				},
+				bounceSm: {
+					"0%, 100%": { transform: "translateY(0)" },
+					"50%": { transform: "translateY(-4px)" },
+				},
+				shimmerText: {
+					"0%": { backgroundPosition: "0% 50%" },
+					"50%": { backgroundPosition: "100% 50%" },
+					"100%": { backgroundPosition: "0% 50%" },
+				},
+				slideInLeft: {
+					"0%": { transform: "translateX(-100%)", opacity: "0" },
+					"100%": { transform: "translateX(0)", opacity: "1" },
+				},
+				slideInRight: {
+					"0%": { transform: "translateX(100%)", opacity: "0" },
+					"100%": { transform: "translateX(0)", opacity: "1" },
+				},
+				flipCard: {
+					"0%": { transform: "rotateY(0deg)", opacity: "1" },
+					"50%": { opacity: "0.9" },
+					"100%": { transform: "rotateY(360deg)", opacity: "1" },
+				},
+				gradientShift: {
+					"0%": { backgroundPosition: "0% 50%" },
+					"50%": { backgroundPosition: "100% 50%" },
+					"100%": { backgroundPosition: "0% 50%" },
+				},
+				rotateIn: {
+					"0%": { transform: "rotate(-10deg) scale(0.95)", opacity: "0" },
+					"100%": { transform: "rotate(0deg) scale(1)", opacity: "1" },
 				},
 			},
 		},

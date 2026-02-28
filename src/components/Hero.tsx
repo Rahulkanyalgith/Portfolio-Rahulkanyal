@@ -2,197 +2,273 @@ import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "@/components/utils/Typewriter";
 import { Spotlight } from "./Aceternity/Spotlight";
-
 import OrbitImage from "./OrbitImage";
 
 type Props = {
 	socialMedia: { name: string; link: string; logo: any }[];
 };
 
-
-
 function Hero({ socialMedia }: Props) {
 	return (
 		<div
 			id="home"
-			className="mb-16 mt-16 flex min-h-[calc(100vh-64px)] w-full flex-col-reverse items-center justify-evenly gap-10 overflow-hidden md:justify-around lg:flex-row lg:gap-0"
+			className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
 		>
-			<svg
-				className="absolute bottom-0 right-0 hidden -translate-x-6 translate-y-4 opacity-25 md:block lg:opacity-70"
-				width="186"
-				height="186"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					d="M153.722 91.11c-1.137 0-2.085.948-2.085 2.148 0 1.138.948 2.085 2.149 2.085 1.2 0 2.084-.947 2.084-2.148 0-1.137-.947-2.085-2.148-2.085Zm0 30.455c-1.137 0-2.085.947-2.085 2.148 0 1.137.948 2.085 2.149 2.085 1.2 0 2.084-.948 2.084-2.149 0-1.137-.947-2.084-2.148-2.084Zm0 30.391c-1.137 0-2.085.947-2.085 2.148 0 1.137.948 2.085 2.149 2.085 1.2 0 2.084-.948 2.084-2.149 0-1.137-.947-2.084-2.148-2.084Zm0 30.706c-1.011 0-1.769.822-1.769 1.833 0 1.011.822 1.769 1.833 1.769 1.011 0 1.768-.821 1.768-1.833 0-1.011-.821-1.769-1.832-1.769Zm0-121.943a2.103 2.103 0 0 0-2.085 2.085c0 1.137.948 2.085 2.085 2.085a2.104 2.104 0 0 0 2.085-2.085c.063-1.138-.948-2.085-2.085-2.085Zm0-60.466c-1.011 0-1.769.82-1.769 1.832 0 1.011.822 1.77 1.833 1.77 1.011 0 1.768-.822 1.768-1.833 0-1.011-.821-1.769-1.832-1.769ZM93.198 90.226c-1.516 0-2.78 1.264-2.78 2.78 0 1.516 1.264 2.78 2.78 2.78 1.516 0 2.78-1.264 2.78-2.78 0-1.516-1.264-2.78-2.78-2.78Zm0 30.833c-1.326 0-2.464 1.137-2.464 2.401 0 1.327 1.138 2.338 2.464 2.338 1.327 0 2.464-1.138 2.464-2.338 0-1.39-1.137-2.401-2.464-2.401 0-.127 0-.127 0 0Zm0 30.581c-1.2 0-2.148 1.011-2.148 2.148 0 1.2 1.011 2.148 2.148 2.148 1.137 0 2.148-1.011 2.148-2.148a2.13 2.13 0 0 0-2.148-2.148Zm0 30.769a1.834 1.834 0 0 0 0 3.665 1.833 1.833 0 0 0 0-3.665Zm0-122.196c-1.326 0-2.4 1.138-2.4 2.465s1.136 2.4 2.463 2.4c1.327 0 2.401-1.137 2.401-2.4a2.468 2.468 0 0 0-2.464-2.465c0-.063 0-.063 0 0Zm0-60.213a1.833 1.833 0 0 0 0 3.664 1.832 1.832 0 0 0 0-3.664ZM62.936 91.11c-1.327 0-2.463 1.075-2.463 2.401 0 1.327 1.073 2.464 2.4 2.464s2.464-1.074 2.464-2.4c0-1.328-1.075-2.465-2.401-2.465Zm0 30.391c-1.327 0-2.463 1.075-2.463 2.401 0 1.327 1.073 2.464 2.4 2.464s2.464-1.073 2.464-2.401c0-1.327-1.075-2.464-2.401-2.464Zm0 30.708c-1.137 0-2.148.947-2.148 2.084 0 1.138.948 2.148 2.085 2.148s2.148-.948 2.148-2.084c0-1.201-.948-2.148-2.085-2.148Zm0 30.706c-1.011 0-1.832.758-1.832 1.769s.758 1.833 1.769 1.833c1.01 0 1.833-.758 1.833-1.769s-.76-1.833-1.77-1.833Zm0-122.196a2.4 2.4 0 0 0-2.4 2.401 2.4 2.4 0 1 0 4.801 0c0-1.264-1.075-2.4-2.401-2.4ZM32.674 91.426c-1.137 0-2.148.948-2.148 2.085 0 1.138.948 2.149 2.085 2.149s2.148-.948 2.148-2.086c.063-1.2-.948-2.211-2.085-2.148 0-.063 0-.063 0 0Zm0 30.391c-1.137 0-2.148.948-2.148 2.085 0 1.138.948 2.149 2.085 2.149s2.148-.949 2.148-2.086c.063-1.2-.948-2.211-2.085-2.148 0-.063 0-.063 0 0Zm0 30.392c-1.137 0-2.148.947-2.148 2.084 0 1.138.948 2.148 2.085 2.148s2.148-.948 2.148-2.084c.063-1.201-.948-2.212-2.085-2.148 0-.064 0-.064 0 0Zm0 30.706c-1.011 0-1.832.758-1.832 1.769s.758 1.833 1.77 1.833c1.01 0 1.83-.758 1.83-1.769.065-1.075-.757-1.896-1.768-1.833 0-.063 0-.063 0 0Zm90.849-152.271c-1.137 0-2.147.948-2.147 2.084 0 1.138.947 2.149 2.084 2.149 1.138 0 2.148-.947 2.148-2.085.063-1.2-.948-2.212-2.085-2.148 0-.064 0-.064 0 0ZM62.936.569c-1.011 0-1.832.758-1.832 1.769 0 1.01.758 1.832 1.769 1.832 1.01 0 1.833-.758 1.833-1.769.062-1.074-.76-1.895-1.77-1.832 0-.063 0-.063 0 0ZM2.412 91.679c-1.01 0-1.832.758-1.832 1.769 0 1.01.758 1.832 1.768 1.832 1.011 0 1.833-.758 1.833-1.769 0-1.01-.758-1.832-1.769-1.832Zm0 30.391c-1.01 0-1.832.758-1.832 1.769s.758 1.832 1.768 1.832c1.011 0 1.833-.758 1.833-1.769s-.758-1.832-1.769-1.832Zm0 30.391c-1.01 0-1.832.758-1.832 1.769s.758 1.832 1.768 1.832c1.011 0 1.833-.758 1.833-1.769s-.758-1.832-1.769-1.832Zm0 30.391c-1.01 0-1.832.758-1.832 1.769s.758 1.833 1.768 1.833c1.011 0 1.833-.759 1.833-1.77 0-1.011-.758-1.832-1.769-1.832Zm0-151.892c-1.01 0-1.832.821-1.832 1.768 0 .949.821 1.77 1.832 1.77 1.011 0 1.832-.821 1.832-1.77-.127-1.01-.82-1.768-1.832-1.768Zm0 30.39c-1.01 0-1.832.822-1.832 1.77 0 .948.821 1.77 1.832 1.77 1.011 0 1.832-.822 1.832-1.77-.127-1.01-.82-1.77-1.832-1.77Zm0-60.844C1.402.506.58 1.264.58 2.275c0 1.01.758 1.832 1.768 1.832 1.011 0 1.833-.759 1.833-1.77 0-1.01-.758-1.831-1.769-1.831ZM123.46 90.794a2.467 2.467 0 0 0-2.464 2.464 2.427 2.427 0 0 0 2.464 2.464 2.427 2.427 0 0 0 2.464-2.464 2.467 2.467 0 0 0-2.464-2.464Zm0 30.391c-1.327 0-2.464 1.138-2.464 2.464 0 1.327 1.137 2.464 2.464 2.464s2.464-1.137 2.464-2.464c0-1.326-1.137-2.464-2.464-2.464Zm0 30.707c-1.2 0-2.148 1.011-2.148 2.148 0 1.201 1.011 2.149 2.148 2.149 1.138 0 2.148-1.011 2.148-2.149 0-1.137-.948-2.148-2.148-2.148Zm0 30.77a1.833 1.833 0 1 0 1.833 1.833c0-1.075-.822-1.833-1.833-1.833Zm30.262-152.271c-1.137 0-2.147.948-2.147 2.085 0 1.138.947 2.085 2.147 2.085 1.201 0 2.148-.947 2.148-2.085 0-1.2-1.011-2.085-2.148-2.085ZM123.46 60.403c-1.327 0-2.4 1.138-2.4 2.464 0 1.327 1.136 2.402 2.463 2.402 1.327 0 2.401-1.138 2.401-2.465s-1.137-2.4-2.464-2.4Zm0-60.214c-1.011 0-1.832.822-1.832 1.77a1.833 1.833 0 0 0 3.665 0c0-.948-.822-1.77-1.833-1.77Zm60.525 91.3c-1.011 0-1.769.821-1.769 1.832 0 1.011.82 1.77 1.831 1.77 1.011 0 1.769-.822 1.769-1.833 0-1.01-.82-1.768-1.831-1.768Zm0 30.391c-1.011 0-1.769.822-1.769 1.833 0 1.011.82 1.769 1.831 1.769 1.011 0 1.769-.822 1.769-1.833 0-1.011-.82-1.769-1.831-1.769Zm0 30.391c-1.011 0-1.769.822-1.769 1.833 0 1.011.82 1.769 1.831 1.769 1.011 0 1.769-.822 1.769-1.833 0-1.011-.82-1.769-1.831-1.769Zm0 30.391c-1.011 0-1.769.822-1.769 1.833 0 1.011.82 1.769 1.831 1.769 1.011 0 1.769-.821 1.769-1.833 0-1.011-.82-1.769-1.831-1.769Zm0-151.955c-.949 0-1.769.821-1.769 1.77 0 .947.82 1.768 1.769 1.768.947 0 1.768-.821 1.768-1.769.063-1.01-.821-1.77-1.768-1.77Zm0-30.454c-1.011 0-1.769.82-1.769 1.832 0 1.011.82 1.77 1.831 1.77 1.011 0 1.769-.822 1.769-1.833 0-1.011-.82-1.769-1.831-1.769ZM32.674 61.035c-1.2 0-2.085.948-2.085 2.085s.948 2.085 2.085 2.085a2.103 2.103 0 0 0 2.084-2.085c.064-1.2-.947-2.085-2.084-2.085Zm0-60.466c-1.011 0-1.832.758-1.832 1.769 0 1.01.758 1.832 1.77 1.832 1.01 0 1.83-.758 1.83-1.769.065-1.074-.757-1.895-1.768-1.832 0-.063 0-.063 0 0ZM93.26 30.644c-1.137 0-2.148.948-2.148 2.084 0 1.138.948 2.149 2.085 2.149 1.138 0 2.148-.947 2.148-2.085.063-1.2-.948-2.212-2.085-2.148 0-.064 0-.064 0 0Zm-30.325 0a2.063 2.063 0 0 0-2.085 2.084c0 1.138.885 2.086 2.085 2.086s2.085-.884 2.085-2.086c.063-1.136-.884-2.084-2.085-2.084Zm-30.262 0c-1.2 0-2.085.948-2.085 2.084 0 1.138.948 2.086 2.085 2.086a2.103 2.103 0 0 0 2.084-2.086c.064-1.2-.884-2.084-2.084-2.084Zm151.311 30.455c-.949 0-1.769.82-1.769 1.768 0 .948.82 1.77 1.769 1.77.947 0 1.768-.822 1.768-1.77.063-1.01-.821-1.768-1.768-1.768Z"
-					fill="url(#a)"
-				></path>
-				<defs>
-					<linearGradient
-						id="a"
-						x1="56.392"
-						y1="0"
-						x2="189.028"
-						y2="2.312"
-						gradientUnits="userSpaceOnUse"
-					>
-						<stop stopColor="#2D88E2"></stop>
-						<stop offset="1" stopColor="#36EC74"></stop>
-					</linearGradient>
-				</defs>
-			</svg>
+			{/* Animated Background Gradient Orbs */}
+			<div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 blur-3xl animate-float [animation-delay:0s]"></div>
+			<div className="absolute -bottom-40 -right-40 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-cyan-600/20 to-blue-600/20 blur-3xl animate-float [animation-delay:2s]"></div>
+			<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-purple-600/10 to-pink-600/10 blur-3xl animate-float [animation-delay:4s]"></div>
+
+			{/* Grid Pattern Overlay */}
+			<div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"></div>
+
+			{/* Spotlights */}
 			<Spotlight
 				className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
 				fill="blue"
 			/>
 			<Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="white" />
 
-			<div className="relative mx-6 flex flex-col gap-6 text-left md:mx-6 md:gap-8 lg:w-1/2 xl:mx-0 2xl:w-1/3">
-				<div className="absolute -top-8 opacity-0 md:opacity-100">
-					<svg
-						width="236"
-						height="68"
-						viewBox="0 0 236 68"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<defs>
-							<linearGradient
-								id="paint0_linear"
-								gradientUnits="userSpaceOnUse"
-								x1="0"
-								y1="0"
-								x2="236"
-								y2="0"
+			{/* Main Content Container */}
+			<div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:py-32">
+				<div className="flex flex-col-reverse items-center justify-between gap-16 lg:flex-row lg:gap-20">
+					
+					{/* Left Content */}
+					<div className="flex flex-col gap-8 text-center lg:text-left lg:max-w-2xl">
+						
+						{/* Animated Line Decoration */}
+						<div className="hidden lg:block absolute -top-8 left-0 opacity-80">
+							<svg
+								width="236"
+								height="68"
+								viewBox="0 0 236 68"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
 							>
-								<stop stopColor="#2EB9DF" stopOpacity="0"></stop>
-								<stop offset="0.5" stopColor="#2EB9DF"></stop>
-								<stop offset="1" stopColor="#9E00FF" stopOpacity="0"></stop>
-							</linearGradient>
+								<defs>
+									<linearGradient
+										id="paint0_linear"
+										gradientUnits="userSpaceOnUse"
+										x1="0"
+										y1="0"
+										x2="236"
+										y2="0"
+									>
+										<stop stopColor="#8B5CF6" stopOpacity="0"></stop>
+										<stop offset="0.5" stopColor="#A855F7"></stop>
+										<stop offset="1" stopColor="#D946EF" stopOpacity="0"></stop>
+									</linearGradient>
+									<mask id="mask">
+										<rect x="-236" y="0" width="236" height="68" fill="white">
+											<animate
+												attributeName="x"
+												from="236"
+												to="-236"
+												dur="2.5s"
+												repeatCount="indefinite"
+											/>
+										</rect>
+									</mask>
+								</defs>
+								<path
+									d="M0.5 0.5H89C90.6569 0.5 92 1.84315 92 3.5V29C92 30.6569 93.3431 32 95 32H148.5C150.157 32 151.5 33.3431 151.5 35V64C151.5 65.6569 152.843 67 154.5 67H235.5"
+									stroke="url(#paint0_linear)"
+									strokeWidth="2"
+									mask="url(#mask)"
+								/>
+							</svg>
+						</div>
 
-							<mask id="mask">
-								<rect x="-236" y="0" width="236" height="68" fill="white">
-									<animate
-										attributeName="x"
-										from="236"
-										to="-236"
-										dur="2.5s"
-										repeatCount="indefinite"
-									/>
-								</rect>
-							</mask>
-						</defs>
+						{/* Greeting Badge */}
+						<div className="animate-fade-in [animation-delay:0.1s]">
+							<div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-violet-500/30 bg-gradient-to-r from-violet-600/10 to-fuchsia-600/10 backdrop-blur-md hover:border-violet-500/50 transition-all duration-300">
+								<Image
+									src={"/ggg.gif"}
+									unoptimized={true}
+									alt="waving-hand"
+									width={28}
+									height={28}
+									className="drop-shadow-lg"
+								/>
+								<p className="text-sm md:text-base font-semibold bg-gradient-to-r from-violet-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
+									Namaste | Welcome to my portfolio
+								</p>
+							</div>
+						</div>
 
-						<path
-							d="M0.5 0.5H89C90.6569 0.5 92 1.84315 92 3.5V29C92 30.6569 93.3431 32 95 32H148.5C150.157 32 151.5 33.3431 151.5 35V64C151.5 65.6569 152.843 67 154.5 67H235.5"
-							stroke="url(#paint0_linear)"
-							strokeWidth="2"
-							mask="url(#mask)"
-						/>
-					</svg>
-				</div>
-				<div className="flex items-center gap-3 mb-2 animate-fade-in">
-					<Image
-						src={"/ggg.gif"}
-						unoptimized={true}
-						alt="waving-hand"
-						width={32}
-						height={32}
-						className="drop-shadow-lg"
-					/>
-					<p className="text-base md:text-lg font-semibold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-						Namste | Kon'nichiwa 
-					</p>
-				</div>
-				<h1 className="text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-white via-blue-400 to-purple-600 bg-clip-text text-transparent" >
-					I'm Rahul Kanyal
-				</h1>
-			
-				<p className="text-sm md:text-base text-zinc-300 font-light leading-relaxed max-w-md">
-				Passionate AI-driven full-stack developer crafting beautiful, functional digital experiences. I transform ideas into engaging, scalable web applications using clean code, modern design principles, and intelligent features powered by AI.
-				</p>
-				<div className="flex flex-wrap items-center gap-4 pt-2">
-					<Link
-						className="group relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 px-6 py-3 text-sm md:text-base font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/50 hover:scale-105 active:scale-95"
-						href={"#about"}
-					>
-						<span>Explore My Work</span>
-						<svg
-							stroke="currentColor"
-							fill="currentColor"
-							strokeWidth="0"
-							viewBox="0 0 512 512"
-							className="transition-transform group-hover:translate-x-1"
-							height="1em"
-							width="1em"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
-						</svg>
-					</Link>
-					<div className="flex items-center gap-2">
-						{socialMedia.map((info, key) => (
+						{/* Main Heading */}
+						<div className="space-y-4 animate-fade-in-up [animation-delay:0.2s]">
+							<h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.1]">
+								<span className="block text-white">I'm</span>
+								<span className="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
+									Rahul Kanyal
+								</span>
+							</h1>
+							
+							{/* Role with Typewriter */}
+							<div className="flex items-center justify-center lg:justify-start gap-3 text-xl md:text-2xl lg:text-3xl font-medium text-zinc-300">
+								<span className="h-8 w-1 bg-gradient-to-b from-violet-500 to-fuchsia-500 rounded-full animate-pulse"></span>
+								<Typewriter
+									words={[
+										"Full Stack Developer",
+										"AI Enthusiast",
+										"UI/UX Designer",
+										"Problem Solver",
+									]}
+									typeSpeed={70}
+									deleteSpeed={50}
+									delaySpeed={2000}
+								/>
+							</div>
+						</div>
+
+						{/* Description */}
+						<p className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-fade-in-up [animation-delay:0.3s]">
+							Passionate <span className="text-violet-300 font-medium">AI-driven full-stack developer</span> crafting beautiful, functional digital experiences. I transform ideas into engaging, scalable web applications using <span className="text-cyan-300 font-medium">clean code</span>, modern design principles, and <span className="text-fuchsia-300 font-medium">intelligent features powered by AI</span>.
+						</p>
+
+						{/* CTA Buttons */}
+						<div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up [animation-delay:0.4s]">
 							<Link
-								key={key}
-								href={info.link}
-								aria-label={info.name}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="group flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/50 backdrop-blur-md transition-all duration-300 hover:border-violet-500 hover:bg-gradient-to-r hover:from-violet-600/20 hover:to-fuchsia-600/20 hover:shadow-lg hover:shadow-violet-500/30"
+								className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold text-base transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-105 active:scale-95 overflow-hidden"
+								href={"#about"}
 							>
-								{info.logo({ className: "h-5 w-5 group-hover:text-violet-400 transition-colors" })}
+								<span className="relative z-10">Explore My Work</span>
+								<svg
+									stroke="currentColor"
+									fill="currentColor"
+									strokeWidth="0"
+									viewBox="0 0 512 512"
+									className="relative z-10 transition-transform group-hover:translate-x-1"
+									height="1.1em"
+									width="1.1em"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+								</svg>
+								<div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 							</Link>
-						))}
+
+							<Link
+								className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-violet-500/30 bg-violet-950/20 backdrop-blur-md text-white font-semibold text-base transition-all duration-300 hover:border-violet-500/60 hover:bg-violet-950/40 hover:shadow-lg hover:shadow-violet-500/20 hover:scale-105 active:scale-95"
+								href={"#contact"}
+							>
+								<span>Let's Talk</span>
+								<span className="text-xl">💬</span>
+							</Link>
+						</div>
+
+						{/* Social Links */}
+						<div className="flex items-center justify-center lg:justify-start gap-3 pt-4 animate-fade-in-up [animation-delay:0.5s]">
+							<span className="text-sm text-zinc-500 mr-2">Connect:</span>
+							{socialMedia.map((info, key) => (
+								<Link
+									key={key}
+									href={info.link}
+									aria-label={info.name}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-md transition-all duration-300 hover:border-violet-500/50 hover:bg-gradient-to-br hover:from-violet-600/20 hover:to-fuchsia-600/20 hover:shadow-lg hover:shadow-violet-500/20 hover:scale-110 hover:-translate-y-1"
+								>
+									{info.logo({ className: "h-5 w-5 text-zinc-400 group-hover:text-violet-400 transition-colors duration-300" })}
+									
+									{/* Tooltip */}
+									<span className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-zinc-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+										{info.name}
+									</span>
+								</Link>
+							))}
+						</div>
+					</div>
+
+					{/* Right Content - Profile Image */}
+					<div className="relative animate-fade-in [animation-delay:0.3s]">
+						{/* Rotating Gradient Ring */}
+						<div className="absolute inset-0 -m-4 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 opacity-60 blur-xl animate-spin-slow"></div>
+						
+						{/* Secondary Glow */}
+						<div className="absolute inset-0 -m-8 rounded-full bg-gradient-to-br from-cyan-600/30 to-blue-600/30 blur-2xl animate-pulse"></div>
+
+						{/* Image Container */}
+						<div className="relative group">
+							{/* Outer Border Ring */}
+							<div className="absolute -inset-1 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-spin-slow"></div>
+							
+							{/* Inner Border */}
+							<div className="absolute inset-0 rounded-full bg-zinc-950 m-1"></div>
+							
+							{/* Profile Image */}
+							<div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden border-4 border-zinc-900 m-1">
+								<Image
+									alt="Rahul Kanyal"
+									width={1000}
+									height={1000}
+									className="h-full w-full object-cover object-center scale-100 group-hover:scale-110 transition-transform duration-500"
+									src={"/profile.jpg"}
+									priority
+								/>
+								
+								{/* Overlay on hover */}
+								<div className="absolute inset-0 bg-gradient-to-t from-violet-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+							</div>
+
+							{/* Floating Tech Icons */}
+							<OrbitImage
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+								name="NEXT JS"
+								size={14}
+								className="-left-8 -top-8 size-16 md:size-20 animate-bounce-sm [animation-delay:0s]"
+							/>
+							<OrbitImage
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+								name="Typescript"
+								size={12}
+								className="-right-10 top-4 size-14 md:size-16 animate-bounce-sm [animation-delay:0.2s]"
+							/>
+							<OrbitImage
+								src="/skills/Nodejs.svg"
+								name="Node JS"
+								size={8}
+								className="-right-16 top-1/2 size-12 md:size-14 animate-bounce-sm [animation-delay:0.4s]"
+							/>
+							<OrbitImage
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+								name="Tailwind CSS"
+								size={8}
+								className="-right-6 -bottom-4 size-10 md:size-12 animate-bounce-sm [animation-delay:0.6s]"
+							/>
+							<OrbitImage
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+								name="Git"
+								size={8}
+								className="-bottom-8 left-1/4 size-10 md:size-12 animate-bounce-sm [animation-delay:0.8s]"
+							/>
+							<OrbitImage
+								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+								name="React"
+								size={8}
+								className="-left-12 top-1/3 size-12 md:size-14 animate-bounce-sm [animation-delay:1s]"
+							/>
+						</div>
+
+						{/* Status Badge */}
+						<div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/40 bg-emerald-950/50 backdrop-blur-md animate-fade-in-up [animation-delay:0.6s]">
+							<span className="relative flex h-3 w-3">
+								<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+								<span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
+							</span>
+							<span className="text-sm font-medium text-emerald-300">Available for work</span>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div className="relative mt-14 h-56 w-56 md:h-80 md:w-80 lg:mt-0 lg:-translate-x-16">
-				<Image
-					alt="avatar"
-					width={1000}
-					height={1000}
-					className="h-full w-full rounded-full object-cover object-center"
-					src={"/profile.jpg"}
-				/>
-				<OrbitImage
-					src={
-						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
-					}
-					name="NEXT JS"
-					size={14}
-					className="-left-12 -top-12 size-20"
-				/>
-				<OrbitImage
-					src={
-						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-					}
-					name="Typescript"	
-					size={12}
-					className="-right-14 -top-4 size-16"
-				/>
-				<OrbitImage
-					src={"/skills/Nodejs.svg"}
-					name="Node JS"
-					size={8}
-					className="-right-24 top-36 size-14"
-				/>
-				<OrbitImage
-					src={
-						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-					}
-					name="Tailwind CSS"
-					size={8}
-					className="-right-8 bottom-0 size-12"
-				/>
-				<OrbitImage
-					src={
-						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-					}
-					name="Git"
-					size={8}
-					className="-bottom-12 right-20 size-12"
-				/>
+
+			{/* Scroll Indicator */}
+			<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in [animation-delay:1s]">
+				<span className="text-xs text-zinc-500">Scroll to explore</span>
+				<div className="w-6 h-10 rounded-full border-2 border-zinc-700 flex justify-center pt-2">
+					<div className="w-1.5 h-3 bg-gradient-to-b from-violet-500 to-fuchsia-500 rounded-full animate-bounce"></div>
+				</div>
 			</div>
 		</div>
 	);
