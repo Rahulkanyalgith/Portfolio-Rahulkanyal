@@ -1,5 +1,6 @@
 import Skills from "@/components/skill/Skills";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Projects from "@/components/projects/Projects";
 import Blog from "@/components/blog/Blog";
@@ -79,6 +80,7 @@ export default async function Home() {
 		<Cursor />
        <Hero socialMedia={socialMedia} />
 		<About />
+		<Experience />
 		<Skills  />
 		<Projects />
 		<Blog />
