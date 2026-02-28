@@ -9,7 +9,7 @@ const experiences = [
     current: true,
     description:
       "Developed AI-powered backend services using RAG, integrated multiple insurance provider APIs for real-time data, automated workflows with Zoho Creator, and designed a scalable PostgreSQL database to support efficient system performance.",
-    technologies: ["RAG", "PostgreSQL", "Zoho Creator", "REST APIs", "AI/ML"],
+    technologies: ["RAG", "LangChain", "PostgreSQL", "MySQL", "Zoho Creator", "REST APIs", "AI/ML"],
   },
   {
     company: "HackWithIndia",
@@ -19,7 +19,7 @@ const experiences = [
     current: false,
     description:
       "Maintained and improved the HackWithIndia website by collaborating with teams, fixing bugs, and enhancing UI/UX to ensure smooth performance during the event. Designed a microservice-based architecture with caching and handled production issues to keep the platform stable during high traffic.",
-    technologies: ["Microservices", "Caching", "UI/UX", "Node.js", "DevOps"],
+    technologies: ["Microservices", "Caching", "UI/UX", "Node.js", "Next.js", "DevOps"],
   },
 ];
 
