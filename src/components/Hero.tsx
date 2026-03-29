@@ -252,13 +252,13 @@ function Hero({ socialMedia }: Props) {
 						</div>
 
 						{/* Status Badge */}
-						<div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/40 bg-emerald-950/50 backdrop-blur-md animate-fade-in-up [animation-delay:0.6s]">
+						{/* <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/40 bg-emerald-950/50 backdrop-blur-md animate-fade-in-up [animation-delay:0.6s]">
 							<span className="relative flex h-3 w-3">
 								<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
 								<span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
 							</span>
 							<span className="text-sm font-medium text-emerald-300">Available for work</span>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
