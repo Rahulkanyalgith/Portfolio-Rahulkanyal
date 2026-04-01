@@ -78,7 +78,7 @@ function About() {
 
 						{/* CTA Buttons */}
 						<div className="flex flex-wrap items-center gap-4 pt-4">
-							<Link
+							{/* <Link
 								href="/resume.pdf"
 								target="_blank"
 								className="group relative inline-flex items-center gap-2.5 px-7 py-3 text-sm font-semibold text-white overflow-hidden rounded-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
@@ -90,7 +90,7 @@ function About() {
 									</svg>
 									Download Resume
 								</span>
-							</Link>
+							</Link> */}
 
 							<Link
 								href="#skills"
